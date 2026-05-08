@@ -45,5 +45,172 @@ This solution improves accessibility, privacy, and management of mental health s
 - CRUD operations
 - MongoDB database integration
 - Organized MVC architecture
+
+## 🛠️ Technologies Used
+### Frontend
+- React.js
+- Axios
+- HTML
+- CSS
+- JavaScript
+
+### Backend
+- Node.js
+- Express.js
+
+### Database
+- MongoDB
+- Mongoose
+
+### Tools & Platforms
+- VS Code
+- Postman
+- GitHub
+
+
+## 🗂️ Project Structure
+
+mental-health-support-system/
+
+- backend
+  - db
+     - db.js
+  - models
+     - userModel.js
+     - counselorModel.js
+     - requestModel.j
+  - controllers
+     - userController.js
+     - counselorController.js
+     - requestController.js
+  - routes
+     - userRoutes.js
+     - counselorRoutes.js
+     - requestRoutes.js
+   - .env
+   - .gitignore
+   - index.js
+   - package.json
+
+- frontend
+   - public
+   - src
+      - components
+      - pages
+      - App.js
+      - index.js
+  - package.json
+
+- docs
+   - screenshots
+   - postman
+       - mental-health-api.json
+   - presentation
+
+- README.md
+
+
+## 🧠 Database Collections
+### 1. Users Collection
+Stores student details.
+-Fields
+-name
+-email
+
+### 2. Counselors Collection
+Stores counselor/admin information.
+-Fields
+-name
+-email
+-specialization
+
+### 3. Requests Collection
+Stores counseling requests.
+-Fields
+-userId
+-counselorId
+-issue
+-status
+
+
+## 🔗 API Endpoints
+### 👤 User APIs
+- POST `/api/users` → Create user  
+- GET `/api/users` → Get all users  
+
+### 👨‍⚕️ Counselor APIs
+- POST `/api/counselors` → Create counselor  
+- GET `/api/counselors` → Get all counselors  
+
+### 📝 Request APIs
+- POST `/api/requests` → Create request  
+- GET `/api/requests` → Get all requests  
+- PUT `/api/requests/:id` → Update request  
+- DELETE `/api/requests/:id` → Delete request  
+
+
+## ⚙️ Setup Instructions
+### Step 1 — Clone Repository
+git clone YOUR_GITHUB_REPOSITORY_LINK
+
+### Step 2 — Install Backend Dependencies
+cd backend  
+npm install  
+
+### Step 3 — Create Environment Variables
+Create `.env` file in backend folder:
+
+PORT=5000  
+MONGO_URI=mongodb://127.0.0.1:27017/mentalHealthDB  
+
+
+
+## ▶️ How to Run the Project
+### Start MongoDB
+Make sure MongoDB is running.
+### Run Backend
+cd backend  
+node index.js  
+### Run Frontend
+cd frontend  
+npm start  
+
+Frontend runs at:
+http://localhost:5000  
+
+### 🧪 API Testing
+API testing was done using Postman.  
+Postman collection is available in:
+docs/postman/
+
+### 📸 Screenshots
+Project screenshots are available in:
+docs/screenshots/
+Includes:
+- API testing  
+- MongoDB connection  
+- Folder structure  
+- Frontend UI
+  
+## 🚀 Future Improvements
+JWT Authentication
+Role-based access control
+Real-time chat system
+Online appointment scheduling
+Email notifications
+AI-based emotional analysis
+Mobile responsive UI
+
+## ❤️ Conclusion
+
+The MERN Mental Health Support System provides a secure and accessible platform for students to seek counseling support. The project demonstrates full-stack web development concepts including REST APIs, MongoDB integration, CRUD operations, MVC architecture, and frontend-backend communication using the MERN stack.
+
+## 👩‍💻 Developed By
+Harshani Sandunika Ranasingha
+2022/ICT/78
+
+
+Harshani Sandunika Ranasingha
+
 - Multiple database collections
 - API testing with Postman
