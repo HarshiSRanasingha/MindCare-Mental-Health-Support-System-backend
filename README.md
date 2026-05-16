@@ -78,19 +78,20 @@ status (Enum: 'Pending', 'In Progress', 'Resolved')
 counselorAssigned (ObjectId, ref: 'Counselor', optional)
 
 ### 🏗️ 5.3 System Architecture Diagram
-graph TD
-    Client([💻 Frontend Client / Axios]) -->|HTTP Request| Express[🚂 Express.js Server / Entry Point]
-    
-    subgraph ⚙️ Backend API Service
-        Express --> Router[🔀 API Router /routes]
-        Router -->|If Protected| Auth[🛡️ Auth & Role Middleware]
-        Auth -->|Validated| Ctrl[🎛️ Controllers /controllers]
-        Router -->|If Public| Ctrl
-        
-        Ctrl -->|CRUD Ops| Models[🗺️ Mongoose Models /models]
-    end
-    
-    Models <-->|Read/Write| DB[(🍃 MongoDB Atlas / Data Tier)]
+⚙️ Backend API Service
+HTTP Request
+If Protected
+Validated
+If Public
+CRUD Ops
+Read/Write
+💻 Frontend Client / Axios
+🚂 Express.js Server / Entry Point
+🔀 API Router /routes
+🛡️ Auth & Role Middleware
+🎛️ Controllers /controllers
+🗺️ Mongoose Models /models
+🍃 MongoDB Atlas / Data Tier
     
 ## 🌐 6. Comprehensive API Documentation
 Below is the detailed list of available REST endpoints. All requests expect and return application/json.
