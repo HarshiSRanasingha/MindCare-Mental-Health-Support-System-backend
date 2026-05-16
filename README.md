@@ -93,7 +93,7 @@ graph TD
     end
     
     G <-->|REST API Calls| H(("⚙️ MindCare Node.js Backend"))
-    
+```
 ## 🌐 6. Comprehensive API Documentation
 Below is the detailed list of available REST endpoints. All requests expect and return application/json.
 
