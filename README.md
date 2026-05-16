@@ -78,9 +78,6 @@ status (Enum: 'Pending', 'In Progress', 'Resolved')
 counselorAssigned (ObjectId, ref: 'Counselor', optional)
 
 ### 🏗️ 5.3 System Architecture Diagram
-⚠️ Failed to render Mermaid diagram: Lexical error on line 4. Unrecognized text.
-...] subgraph ⚙️ Backend API Servi
----------------------^
 graph TD
     Client([💻 Frontend Client / Axios]) -->|HTTP Request| Express[🚂 Express.js Server / Entry Point]
     
