@@ -1,0 +1,374 @@
+{
+  "info": {
+    "_postman_id": "2dd4efc0-aa62-43a9-b86b-54f9a530ccb0",
+    "name": "ClinicAppointmentAPI",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "54536504",
+    "_collection_link": "https://go.postman.co/collection/54536504-2dd4efc0-aa62-43a9-b86b-54f9a530ccb0?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "register API",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"Admin\",\r\n    \"email\": \"admin@gmail.com\",\r\n    \"password\": \"123456\",\r\n    \"role\": \"admin\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/auth/register",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "auth",
+            "register"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "login API",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\": \"admin@gmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/auth/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "auth",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "create patient",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMDYwYzk3ODA4NmE4ZjhkOWQ4YTU2ZCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3ODc4MjcyMywiZXhwIjoxNzc4ODY5MTIzfQ.T3WvPBnPd_WD-KNmq8YqDBzmI2C2ziywOt2_OK-APoI",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"John\",\r\n    \"age\": 25,\r\n    \"gender\": \"Male\",\r\n    \"phone\": \"0771234567\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/patients",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "patients"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get patients",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMDYwYzk3ODA4NmE4ZjhkOWQ4YTU2ZCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3ODc4MjcyMywiZXhwIjoxNzc4ODY5MTIzfQ.T3WvPBnPd_WD-KNmq8YqDBzmI2C2ziywOt2_OK-APoI",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"John\",\r\n    \"age\": 25,\r\n    \"gender\": \"Male\",\r\n    \"phone\": \"0771234567\"\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/patients",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "patients"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update patient",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMDYwYzk3ODA4NmE4ZjhkOWQ4YTU2ZCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3ODc4MjcyMywiZXhwIjoxNzc4ODY5MTIzfQ.T3WvPBnPd_WD-KNmq8YqDBzmI2C2ziywOt2_OK-APoI",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"age\": 30\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/patients/6a06159a8086a8f8d9d8a56e",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "patients",
+            "6a06159a8086a8f8d9d8a56e"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete patient",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMDYwYzk3ODA4NmE4ZjhkOWQ4YTU2ZCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3ODc4MjcyMywiZXhwIjoxNzc4ODY5MTIzfQ.T3WvPBnPd_WD-KNmq8YqDBzmI2C2ziywOt2_OK-APoI",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"age\": 30\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/patients/6a06159a8086a8f8d9d8a56e",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "patients",
+            "6a06159a8086a8f8d9d8a56e"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "create doctor",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMDYwYzk3ODA4NmE4ZjhkOWQ4YTU2ZCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3ODc4MjcyMywiZXhwIjoxNzc4ODY5MTIzfQ.T3WvPBnPd_WD-KNmq8YqDBzmI2C2ziywOt2_OK-APoI",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"Dr. Smith\",\r\n    \"specialization\": \"Cardiology\",\r\n    \"phone\": \"0712345678\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/doctors",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "doctors"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "New Request",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMDYwYzk3ODA4NmE4ZjhkOWQ4YTU2ZCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3ODc4MjcyMywiZXhwIjoxNzc4ODY5MTIzfQ.T3WvPBnPd_WD-KNmq8YqDBzmI2C2ziywOt2_OK-APoI",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"Dr. Smith\",\r\n    \"specialization\": \"Cardiology\",\r\n    \"phone\": \"0712345678\"\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/doctors",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "doctors"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "create appointment",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"patient\": \"6a06159a8086a8f8d9d8a56e\",\r\n  \"doctor\": \"6a061a128086a8f8d9d8a56f\",\r\n  \"appointmentDate\": \"2026-06-15\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/appointments",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "appointments"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get appointmets",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"patient\": \"6a06159a8086a8f8d9d8a56e\",\r\n  \"doctor\": \"6a061a128086a8f8d9d8a56f\",\r\n  \"appointmentDate\": \"2026-06-15\"\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/appointments",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "appointments"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
